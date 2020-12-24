@@ -1,0 +1,30 @@
+{
+  "name": "cfworker-telegraf-template",
+  "version": "1.0.0",
+  "description": "A template for Telegram Bot using Telegraf Framework on Cloudflare Workers using Typescript",
+  "main": "index.js",
+  "repository": "https://github.com/GeorgeMiao219/cfworker-telegraf-template",
+  "author": "Pop <gm@miao.dev>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "webpack .",
+    "dev": "wrangler dev",
+    "transpile": "tsc --project ./test",
+    "kvlist": "wrangler kv:key list --binding LOG",
+    "pub": "wrangler publish"
+  },
+  "dependencies": {
+    "@cfworker/web": "^1.5.0",
+    "cfworker-middware-telegraf": "^1.0.0",
+    "telegraf": "^3.38.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^2.0.0",
+    "@types/node": "^14.14.16",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
