@@ -1,6 +1,8 @@
+const path = require('path')
+
 module.exports = {
   target: 'webworker',
-  entry: './index.ts',
+  entry: './src/index.ts',
   mode: 'production',
   node: {
     fs: 'empty',
@@ -14,7 +16,14 @@ module.exports = {
       },
     ],
   },
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'worker.js'
+  },
   performance: {
     hints: false,
+  },
+  resolve: {
+    extensions: ['.ts', '.js', '.mjs'],
   },
 }
