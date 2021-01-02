@@ -12,7 +12,7 @@ const sendMsg = async (type: 'Web' | 'Telegram', from?: string, content?: string
 }
 
 bot.hears(/.*/, async ctx => {
-  // if (ctx.from?.id == 698868349) return
+  if (ctx.from?.id == 698868349) return
   await sendMsg('Telegram', ctx.from?.username, ctx.message?.text)
 })
 
